@@ -1,0 +1,13 @@
+#!/bin/bash
+
+while true; do
+	discord=$(hyprctl clients -j \
+				| grep '"title": " - Discord"' -B13 \
+				| grep address \
+				| sed -e 's/"//g' -e 's/ //g' -e 's/,//g')
+	if [ -n "$discord" ]; then
+		hyprctl dispatch movetoworkspacesilent "4,$discord"
+		exit
+	fi
+done &
+
