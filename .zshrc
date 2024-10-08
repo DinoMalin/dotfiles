@@ -100,7 +100,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-export PATH=/home/dinomalin/Téléchargements/node/bin:/home/dinomalin/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/home/dinomalin/.nix-profile/bin:/nix/var/nix/profiles/default/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/var/lib/flatpak/exports/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
 export EDITOR=vim
 
 alias us="~/lang/us.sh"
@@ -123,3 +122,6 @@ alias grc="git rebase --continue"
 
 neofetch
 echo -e '\e]4;2;rgb:a3/ff/95\a'
+bindkey '^H' backward-kill-word
+bindkey '5~' kill-word
+
